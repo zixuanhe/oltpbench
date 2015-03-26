@@ -120,6 +120,7 @@ public abstract class SQLUtil {
         else if (obj instanceof Date) {
             return new Timestamp(((Date)obj).getTime());
         }
+/*
         else if (obj instanceof oracle.sql.TIMESTAMP) {
             try {
                 return ((oracle.sql.TIMESTAMP)obj).timestampValue();
@@ -127,7 +128,7 @@ public abstract class SQLUtil {
                 throw new RuntimeException("Failed to get timestamp from '" + obj + "'", ex);
             }
         }
-        
+*/      
         Long timestamp = SQLUtil.getLong(obj);
         return (timestamp != null ? new Timestamp(timestamp) : null);
     }
