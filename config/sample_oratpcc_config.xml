@@ -3,11 +3,12 @@
 	<!-- General Workload configuration -->
     <dbtype>oracle</dbtype>
     <driver>oracle.jdbc.driver.OracleDriver</driver>
-    <DBUrl>jdbc:oracle:thin:@ec2-107-20-2-159.compute-1.amazonaws.com:1521:ded</DBUrl>
+<!--    <DBUrl>jdbc:oracle:thin:@ec2-107-20-2-159.compute-1.amazonaws.com:1521:ded</DBUrl> -->
+    <DBUrl>jdbc:oracle:thin:@oracle_db:1521:ORCL</DBUrl>
     <DBName>tpcc</DBName>
-    <username>tpcc</username>
-    <password></password>
-    <terminals>1</terminals>
+    <username>tpccsys</username>
+    <password>tpccsys</password>
+    <terminals>8</terminals>
    	
     <works>
         <work>
